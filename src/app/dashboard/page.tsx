@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Page() {
   return (
@@ -6,5 +6,5 @@ export default function Page() {
       <h1>test</h1>
       <Image src="/images/nextjs.png" alt="Next.js" width={50} height={50} />
     </div>
-  );
+  )
 }
