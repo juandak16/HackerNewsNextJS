@@ -1,7 +1,13 @@
 {
   "name": "hackernewsnextjs",
   "version": "0.1.0",
+  "description": "NextJS Hacker News",
+  "author": "Juandak16",
+  "engines": {
+    "node": "18"
+  },
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -42,6 +48,10 @@
     "tailwindcss": "^3.3.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juandak16/HackerNewsNextJS"
   },
   "config": {
     "commitizen": {
