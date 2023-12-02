@@ -2,9 +2,10 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import TabSelector from './tabSelector'
+import { TAB_ALL } from '@/app/utils/home/constants'
 
 const TabSelectorMock = {
-  tabActivated: 'all',
+  tabActivated: TAB_ALL,
   setTabActivated: jest.fn(),
 }
 

@@ -6,7 +6,7 @@ import { NEWS_TYPE, NewsType } from './data'
 
 type FilterDropdownProps = {
   manageFilter: (item: NewsType | null) => void
-  typeSelected?: NewsType
+  typeSelected?: NewsType | null
   isDisabled?: boolean
 }
 

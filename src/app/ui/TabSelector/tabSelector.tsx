@@ -1,16 +1,13 @@
 'use client'
 import React from 'react'
 import styles from './styles.module.css'
+import { TABS } from '@/app/utils/home/constants'
 
 type TabSelectorProps = {
   tabActivated: string
   setTabActivated: (value: string) => void
 }
 const TabSelector = ({ tabActivated, setTabActivated }: TabSelectorProps) => {
-  const TABS = [
-    { title: 'All', value: 'all' },
-    { title: 'My faves', value: 'faves' },
-  ]
   return (
     <div data-testid="home-tab-selector" className={`${styles.contentTabs} flex justify-center my-0 mx-auto mb-16`}>
       {TABS?.map((tab, index) => (
