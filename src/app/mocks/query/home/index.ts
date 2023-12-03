@@ -96,3 +96,29 @@ export const HOME_DATA = {
     },
   ],
 } as { data: NewsDataFormatted[] }
+
+export const FAVES_DATA = {
+  data: [
+    {
+      author: 'rgbrgb',
+      created_at: '2021-09-18T18:02:33.000Z',
+      story_title: 'Let’s talk about founder compensation',
+      story_url: 'https://auren.substack.com/p/lets-talk-about-founder-compensation',
+      story_id: '28577611',
+    },
+    {
+      author: 'rusk',
+      created_at: '2021-09-18T18:02:30.000Z',
+      story_title: 'Git Commands Explained with Cats (2017)',
+      story_url: 'https://girliemac.com/blog/2017/12/26/git-purr/',
+      story_id: 28575524,
+    },
+    {
+      author: 'k__',
+      created_at: '2021-09-18T18:02:12.000Z',
+      story_title: 'Let’s talk about founder compensation',
+      story_url: 'https://auren.substack.com/p/lets-talk-about-founder-compensation',
+      story_id: '28577611',
+    },
+  ],
+} as { data: NewsDataFormatted[] }

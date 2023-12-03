@@ -15,7 +15,7 @@ const Footer = ({ tabActived, setPage }: Props) => {
   }, [inView, setPage])
 
   return (
-    <>
+    <div data-testid="footer">
       {tabActived === TAB_ALL ? (
         <footer ref={ref} data-testid="home-footer">
           <Loading />
@@ -25,7 +25,7 @@ const Footer = ({ tabActived, setPage }: Props) => {
           <Loading />
         </footer>
       )}
-    </>
+    </div>
   )
 }
 
