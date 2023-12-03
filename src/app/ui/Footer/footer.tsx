@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Loading } from '../Loading/loading'
 import { useInView } from 'react-intersection-observer'
-import { TAB_ALL } from '@/app/utils/home/constants'
+import { TAB_ALL } from '@/app/utils/home/constant'
 
 type Props = {
   tabActived: string
@@ -11,11 +11,8 @@ const Footer = ({ tabActived, setPage }: Props) => {
   let { ref, inView } = useInView({ trackVisibility: true, delay: 300, threshold: 0.5 })
 
   useEffect(() => {
-    if (inView) setPage((prev: number) => prev + 1)
-  }, [inView])
-
-  console.log('ref', ref)
-  console.log('inView', inView)
+    if (inView) setPage((prevPage: number) => prevPage + 1)
+  }, [inView, setPage])
 
   return (
     <>

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import styles from './styles.module.css'
-import { TABS } from '@/app/utils/home/constants'
+import { TABS } from '@/app/utils/home/constant'
 
 type TabSelectorProps = {
   tabActivated: string

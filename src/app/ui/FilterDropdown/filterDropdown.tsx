@@ -2,7 +2,7 @@
 import React from 'react'
 import Select from 'react-select'
 import { StylesSelect } from './styles'
-import { NEWS_TYPE, NewsType } from './data'
+import { NEWS_TYPE, NewsType } from './constant'
 
 type FilterDropdownProps = {
   manageFilter: (item: NewsType | null) => void

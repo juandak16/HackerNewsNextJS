@@ -7,6 +7,7 @@ type ItemListProps = {
   faves: NewsDataFormatted[]
   setFaves: React.Dispatch<React.SetStateAction<NewsDataFormatted[]>>
 }
+
 const ItemList = ({ data, faves, setFaves }: ItemListProps) => {
   return data?.map((item, index) => {
     return (

@@ -60,6 +60,7 @@ export const useApiCall = ({ typeSelected, page, limit }: RequestData) => {
       })
       .catch((error: Error) => {
         setError(error)
+        // eslint-disable-next-line no-console
         console.error('Error:', error)
       })
 
