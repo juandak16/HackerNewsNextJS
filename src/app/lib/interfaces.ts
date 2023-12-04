@@ -7,20 +7,20 @@ interface HighlightResult {
 interface Hit {
   title: string
   url: string
-  author: string
+  author?: string
   points: number
   story_text: string | null
   comment_text: string | null
   _tags: string[]
   num_comments: number
   objectID: string
-  story_title: string
-  story_url: string
+  story_title?: string
+  story_url?: string
   story_id: string
-  created_at: string
+  created_at?: string
   _highlightResult: {
-    title: HighlightResult
-    url: HighlightResult
+    story_title: HighlightResult
+    story_url: HighlightResult
     author: HighlightResult
   }
 }

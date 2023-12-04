@@ -1,3 +1,4 @@
+import { NewsData } from '@/app/lib/interfaces'
 import { NewsDataFormatted } from '@/app/lib/types'
 
 export const HOME_DATA = {
@@ -122,3 +123,76 @@ export const FAVES_DATA = {
     },
   ],
 } as { data: NewsDataFormatted[] }
+
+export const NEWS_DATA = {
+  hits: [
+    {
+      _highlightResult: {
+        author: { matchLevel: 'none', matchedWords: [], value: 'Smoosh' },
+        story_title: { matchLevel: 'none', matchedWords: [], value: 'Forecasts need to have error bars' },
+        story_url: {
+          matchLevel: 'none',
+          matchedWords: [],
+          value: 'https://testurl.com',
+        },
+      },
+      title: 'Test Title',
+      story_text: null,
+      url: 'https://testurl.com',
+      points: 1,
+      num_comments: 0,
+      _tags: ['comment', 'story_38519277'],
+      author: 'TestAuthor',
+      comment_text:
+        'It seems unlikely that the modelling and forecasting has become worse, so I guess there is some sort of change happening to the climate making it more unstable and less predictable?',
+      created_at: '2023-11-28',
+      objectID: '38523391',
+      story_id: '123',
+      story_title: 'Test Title',
+      story_url: 'https://testurl.com',
+    },
+  ],
+  page: 0,
+  nbHits: 35905657,
+  nbPages: 125,
+  hitsPerPage: 8,
+  processingTimeMS: 1,
+  query: '',
+  params: 'page=0&hitsPerPage=8&advancedSyntax=true&analyticsTags=backend',
+} as NewsData
+
+export const NEWS_DATA_WITH_EMPTY_VALUES = {
+  hits: [
+    {
+      _highlightResult: {
+        author: { matchLevel: 'none', matchedWords: [], value: 'Smoosh' },
+        story_title: { matchLevel: 'none', matchedWords: [], value: 'Forecasts need to have error bars' },
+        story_url: {
+          matchLevel: 'none',
+          matchedWords: [],
+          value: 'https://testurl.com',
+        },
+      },
+      title: 'Test Title',
+      story_text: null,
+      url: 'https://testurl.com',
+      points: 1,
+      num_comments: 0,
+      _tags: ['comment', 'story_38519277'],
+      comment_text:
+        'It seems unlikely that the modelling and forecasting has become worse, so I guess there is some sort of change happening to the climate making it more unstable and less predictable?',
+      created_at: '2023-11-28',
+      objectID: '38523391',
+      story_id: '123',
+      story_title: 'Test Title',
+      story_url: 'https://testurl.com',
+    },
+  ],
+  page: 0,
+  nbHits: 35905657,
+  nbPages: 125,
+  hitsPerPage: 8,
+  processingTimeMS: 1,
+  query: '',
+  params: 'page=0&hitsPerPage=8&advancedSyntax=true&analyticsTags=backend',
+} as NewsData

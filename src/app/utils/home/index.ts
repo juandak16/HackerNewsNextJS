@@ -5,7 +5,7 @@ export const getKey = (item: NewsDataFormatted) => {
   return `${item.created_at}-${item.author}`
 }
 
-type manageFaveProps = {
+export type manageFaveProps = {
   item: NewsDataFormatted
   faves: NewsDataFormatted[]
   setFaves: (item: NewsDataFormatted[]) => void
@@ -26,7 +26,7 @@ export const manageFave = ({ item, faves, setFaves }: manageFaveProps) => {
   }
 }
 
-type manageFilterProps = {
+export type manageFilterProps = {
   item: NewsType | null
   setPage: (page: number) => void
   setData: (data: NewsDataFormatted[]) => void

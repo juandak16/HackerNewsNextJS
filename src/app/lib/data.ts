@@ -31,7 +31,7 @@ type RequestData = {
   limit: number
 }
 
-const getEndpoint = ({ typeSelected, page, limit }: RequestData) => {
+export const getEndpoint = ({ typeSelected, page, limit }: RequestData) => {
   return `https://hn.algolia.com/api/v1/search_by_date?${
     typeSelected ? `query=${typeSelected}` : ''
   }&page=${page}&hitsPerPage=${limit}`
@@ -44,28 +44,28 @@ export const useApiCall = ({ typeSelected, page, limit }: RequestData) => {
 
   useEffect(() => {
     setLoading(true)
-    //get endpoint url
     let endpoint = getEndpoint({ typeSelected, page, limit })
+    const fetchData = async () => {
+      try {
+        const endpoint = getEndpoint({ typeSelected, page, limit })
+        const response = await fetch(endpoint)
 
-    fetch(endpoint)
-      .then((response: Response) => {
         if (!response.ok) {
           throw new Error('La solicitud no fue exitosa')
         }
 
-        return response.json() as Promise<NewsData>
-      })
-      .then((data: NewsData) => {
-        setData(formatData(data))
-      })
-      .catch((error: Error) => {
-        setError(error)
-        // eslint-disable-next-line no-console
+        const responseData = await response.json()
+        setData(formatData(responseData))
+      } catch (error) {
+        setError(error as Error)
         console.error('Error:', error)
-      })
+      } finally {
+        setLoading(false)
+      }
+    }
 
-    setLoading(false)
-  }, [typeSelected, page]) // eslint-disable-line react-hooks/exhaustive-deps
+    fetchData()
+  }, [typeSelected, page, limit]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return { loading, data, error }
 }
