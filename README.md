@@ -1,16 +1,16 @@
-# Proyecto Hacker News con Next.js
+# Hacker News Project with Next.js
 
-Este proyecto es una aplicación basada en Next.js que recupera y muestra noticias de Hacker News. Utiliza Tailwind CSS para los estilos de los componentes y está configurado con herramientas como Jest, ESLint, Prettier y Semantic Release para pruebas, linting, formateo y versionado, respectivamente.
+This project is a Next.js-based application that retrieves and displays news from Hacker News. It utilizes Tailwind CSS for component styling and is configured with tools like Jest, ESLint, Prettier, and Semantic Release for testing, linting, formatting, and versioning, respectively.
 
-## Despliegue en Vercel
+## Deployment on Vercel
 
-Este proyecto está desplegado en Vercel. Puedes acceder a la versión en vivo aquí: [HackerNews](https://hacker-news-juandak16.vercel.app/)
+This project is deployed on Vercel. You can access the live version here: [HackerNews](https://hacker-news-juandak16.vercel.app/)
 
-## Configuración
+## Setup
 
-### Instalación
+### Installation
 
-Para empezar, clona este repositorio e instala las dependencias:
+To get started, clone this repository and install the dependencies:
 
 ```bash
 git clone https://github.com/juandak16/HackerNewsNextJS.git
@@ -21,9 +21,9 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Versionado
+## Versioning
 
-Este proyecto utiliza Semantic Release para gestionar versiones automáticas basadas en convenciones de commits. Las versiones se generan automáticamente después de cada merge en la rama `main`.
+This project uses Semantic Release to manage automatic versioning based on commit conventions. Versions are automatically generated after each merge into the `main` branch.
 
 ## Tecnologías Utilizadas
 
