@@ -1,7 +1,11 @@
 import { NewsDataFormatted } from '@/app/lib/types'
 import Image from 'next/image'
 import React from 'react'
-import * as timeago from 'timeago.js'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+
+// Agrega el plugin de relativeTime
+dayjs.extend(relativeTime)
 
 type NewsCardProps = {
   manageFave: (item: NewsDataFormatted) => void
@@ -21,7 +25,7 @@ const NewsCard = ({ item, faved, manageFave }: NewsCardProps) => {
         <div className="flex items-center font-roboto text-xs mt-3 mr-2">
           <Image src="/clock.png" alt="date" className="w-4 h-4 object-contain m-0 mr-2" width={20} height={20} />
           <p className="m-0">
-            {timeago.format(created_at)} by {author}
+            {dayjs(created_at).fromNow()} by {author}
           </p>
         </div>
         <p className="m-1.5 mr-4 font-roboto font-medium text-sm">{story_title}</p>

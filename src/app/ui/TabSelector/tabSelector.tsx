@@ -15,8 +15,8 @@ const TabSelector = ({ tabActivated, setTabActivated }: TabSelectorProps) => {
           onClick={() => {
             setTabActivated(tab.value)
           }}
-          className={`text-gray-600 transition duration-300 z-1 relative w-24 border border-solid py-0 mx-0 text-base font-medium ${
-            tabActivated === tab.value ? `${styles.activeTab}` : ''
+          className={` transition duration-300 z-1 relative w-24 border border-solid py-0 mx-0 text-base font-medium ${
+            tabActivated === tab.value ? `text-customBlue border-customBlue` : 'text-customGray600'
           }`}
           key={index}
         >
