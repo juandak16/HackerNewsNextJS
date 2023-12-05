@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react'
-import { HOME_DATA, NEWS_DATA, NEWS_DATA_WITH_EMPTY_VALUES } from '../mocks/query/home'
+import { NEWS_DATA, NEWS_DATA_WITH_EMPTY_VALUES } from '../mocks/query/home'
 import { formatData, getEndpoint, useApiCall } from './data' // Reemplaza 'yourFile' con la ruta correcta a tu archivo
 import { NewsDataFormatted } from './types'
 

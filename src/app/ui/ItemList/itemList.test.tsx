@@ -1,9 +1,8 @@
 import React from 'react'
-import { act, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import ItemList from './itemList'
 import { FAVES_DATA, HOME_DATA } from '@/app/mocks/query/home'
-import userEvent from '@testing-library/user-event'
 
 const ItemListMock = {
   data: HOME_DATA.data,
