@@ -1,4 +1,4 @@
-import { NEWS_TYPE } from '@/app/ui/FilterDropdown/constant'
+import { NEWS_TYPE } from './constant'
 import { getKey, manageFave, manageFilter, manageFaveProps, manageFilterProps } from './index'
 
 const mockItem = {

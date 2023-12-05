@@ -1,9 +1,13 @@
+import { NewsType } from '@/app/lib/types'
 import Image from 'next/image'
 
-export type NewsType = {
-  value: string
-  label: JSX.Element
-}
+export const LIMIT = 8
+export const TAB_ALL = 'all'
+export const TAB_FAVES = 'faves'
+export const TABS = [
+  { title: 'All', value: TAB_ALL },
+  { title: 'My faves', value: TAB_FAVES },
+]
 export const NEWS_TYPE: NewsType[] = [
   {
     value: 'angular',

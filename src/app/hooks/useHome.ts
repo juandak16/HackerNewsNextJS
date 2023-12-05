@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-import { NEWS_TYPE, NewsType } from '../ui/FilterDropdown/constant'
-import { NewsDataFormatted } from '../lib/types'
+import { NewsDataFormatted, NewsType } from '../lib/types'
 import { useApiCall } from '../lib/data'
-import { LIMIT, TAB_ALL } from '../utils/home/constant'
+import { LIMIT, NEWS_TYPE, TAB_ALL } from '../utils/home/constant'
 
 export const useHome = () => {
   const [tabActived, setTabActived] = useState(TAB_ALL)
