@@ -1,5 +1,4 @@
-import { NewsDataFormatted } from '@/app/lib/types'
-import { NewsType } from '@/app/ui/FilterDropdown/constant'
+import { NewsDataFormatted, NewsType } from '@/app/lib/types'
 
 export const getKey = (item: NewsDataFormatted) => {
   return `${item.created_at}-${item.author}`

@@ -2,12 +2,12 @@
 import React from 'react'
 import TabSelector from './ui/TabSelector/tabSelector'
 import FilterDropdown from './ui/FilterDropdown/filterDropdown'
-import { NewsType } from './ui/FilterDropdown/constant'
 import Footer from './ui/Footer/footer'
 import { TAB_ALL } from './utils/home/constant'
 import { manageFilter } from './utils/home'
 import ItemList from './ui/ItemList/itemList'
 import { useHome } from './hooks/useHome'
+import { NewsType } from './lib/types'
 
 export default function Home() {
   const { tabActived, setTabActived, typeSelected, setTypeSelected, faves, setFaves, setPage, data, setData } =
