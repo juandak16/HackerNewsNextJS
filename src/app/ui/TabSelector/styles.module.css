@@ -1,0 +1,12 @@
+.contentTabs > button:first-child {
+  border-radius: 2px 0px 0px 2px;
+  z-index: 0;
+  left: 1px;
+}
+.contentTabs > button:last-child {
+  border-radius: 0px 2px 2px 0px;
+}
+.activeTab {
+  color: #1797ff !important;
+  border-color: #1797ff;
+}
